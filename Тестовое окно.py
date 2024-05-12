@@ -16,8 +16,20 @@ x = W //2
 y = H//2
 r = 50
 
-while 1:
+screen.fill(BLUE)
+
+pygame.draw.rect(screen, (255,255,255),
+                                (20,20,100,75), 5)
+
+pygame.draw.lines(screen, (0,0,0),  [[10,100], [140,170],[280,110]])
+
+pygame.draw.aalines(screen, (0,0,0),True,[[10,100], [140,170],[280,110]])
+
+pygame.display.update()
+
+while True:
     for i in pygame.event.get():
         if i.type == pygame.QUIT:
             sys.exit()
-        elif i
+
+
